@@ -35,16 +35,16 @@ internal class Program
 
     private static void Test_ThrowIfNullOrEmptyWithMethod(string input)
     {
-        ThrowIfNullOrEmpty(input);
+        ThrowIfNullOrEmpty(input, nameof(input));
 
         Console.WriteLine($"Input value is {input}");
     }
 
-    private static void ThrowIfNullOrEmpty(string input)
+    private static void ThrowIfNullOrEmpty(string input, string? paramName = null)
     {
         if (string.IsNullOrEmpty(input))
         {
-            throw new ArgumentException("The value cannot be an empty string.", nameof(input));
+            throw new ArgumentException("The value cannot be an empty string.", paramName);
         }
     }
 
@@ -54,7 +54,7 @@ internal class Program
 
     private static void Test_ThrowIfNullOrEmptyWithExtensionMethod(string input)
     {
-        ArgumentException.ThrowIfNullOrEmpty(input);
+        ArgumentException.ThrowIfNullOrEmpty(input, nameof(input));
 
         Console.WriteLine($"Input value is {input}");
     }
