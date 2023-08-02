@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{405507B5-FD4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalks.SimpleStringConcatention.Benchmarks", "src\TechTalks.SimpleStringConcatention.Benchmarks\TechTalks.SimpleStringConcatention.Benchmarks.csproj", "{1A07B022-6BE5-4C83-95F7-76D5C8D44F26}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTalks.NullState", "src\TechTalks.NullStateStaticAnalysis\TechTalks.NullState.csproj", "{E1F234FB-0E12-418C-BCD5-3B5363A9F00F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{1A07B022-6BE5-4C83-95F7-76D5C8D44F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A07B022-6BE5-4C83-95F7-76D5C8D44F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A07B022-6BE5-4C83-95F7-76D5C8D44F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F234FB-0E12-418C-BCD5-3B5363A9F00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F234FB-0E12-418C-BCD5-3B5363A9F00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F234FB-0E12-418C-BCD5-3B5363A9F00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F234FB-0E12-418C-BCD5-3B5363A9F00F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1A07B022-6BE5-4C83-95F7-76D5C8D44F26} = {405507B5-FD41-4A46-9873-820452FCB403}
+		{E1F234FB-0E12-418C-BCD5-3B5363A9F00F} = {405507B5-FD41-4A46-9873-820452FCB403}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D6F0EC9-2B3D-4287-AC72-61F6CF79DF6E}
