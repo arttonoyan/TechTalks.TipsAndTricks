@@ -1,29 +1,15 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Columns;
-using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Jobs;
-using BenchmarkDotNet.Reports;
 using System.Text;
 
 namespace TechTalks.SimpleStringConcatention.Benchmarks;
 
 [MemoryDiagnoser]
-[Config(typeof(Config))]
 [LongRunJob(RuntimeMoniker.Net60)]
 //[LongRunJob(RuntimeMoniker.Net70)]
 //[LongRunJob(RuntimeMoniker.Net80)]
-//[HideColumns(Column.Job, Column.RatioSD, Column.AllocRatio)]
 public class StringConcatSimple
 {
-    private class Config : ManualConfig
-    {
-        public Config()
-        {
-            SummaryStyle =
-                SummaryStyle.Default.WithRatioStyle(RatioStyle.Percentage);
-        }
-    }
-
     private string title = "Mr.", firstName = "Artyom", middleName = "Tonoyan", lastName = "Armen";
 
     [Benchmark]
