@@ -3,6 +3,7 @@
 namespace TechTalks.SimpleStringConcatention.Benchmarks;
 
 //Prefer string.Equals over ToLower/ToUpper
+[MemoryDiagnoser]
 public class StringEqualsSample
 {
     private readonly string str1 = "HELLO WORLD";
