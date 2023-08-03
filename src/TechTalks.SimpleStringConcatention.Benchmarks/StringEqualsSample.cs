@@ -5,8 +5,8 @@ namespace TechTalks.SimpleStringConcatention.Benchmarks;
 //Prefer string.Equals over ToLower/ToUpper
 public class StringEqualsSample
 {
-    private string str1 = "HELLO WORLD";
-    private string str2 = "hello world";
+    private readonly string str1 = "HELLO WORLD";
+    private readonly string str2 = "hello world";
 
     [Benchmark]
     public bool Equals_OrdinalIgnoreCase() =>
