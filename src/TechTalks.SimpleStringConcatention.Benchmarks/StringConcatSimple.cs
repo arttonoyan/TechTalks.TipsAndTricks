@@ -52,37 +52,22 @@ public class StringConcatSimple
     }
 
     [Benchmark]
-    public string StringPlus()
-    {
-        return title + ' ' + firstName + ' ' +
-            middleName + ' ' + lastName;
-    }
+    public string StringPlus() =>
+        title + ' ' + firstName + ' ' + middleName + ' ' + lastName;
 
     [Benchmark]
-    public string StringFormat()
-    {
-        return string.Format("{0} {1} {2} {3}",
-            title, firstName, middleName, lastName);
-    }
+    public string StringFormat() =>
+        string.Format("{0} {1} {2} {3}", title, firstName, middleName, lastName);
 
     [Benchmark]
-    public string StringInterpolation()
-    {
-        return
+    public string StringInterpolation() =>
         $"{title} {firstName} {middleName} {lastName}";
-    }
 
     [Benchmark(Baseline = true)]
-    public string StringJoin()
-    {
-        return string.Join(" ", title, firstName, //changed from ' ' to " " for net48
-            middleName, lastName);
-    }
+    public string StringJoin() =>
+        string.Join(" ", title, firstName, middleName, lastName);
 
     [Benchmark]
-    public string StringConcat()
-    {
-        return string.
-            Concat(new String[] { title, " ", firstName, " ", middleName, " ", lastName });
-    }
+    public string StringConcat() =>
+        string.Concat(new string[] { title, " ", firstName, " ", middleName, " ", lastName });
 }
