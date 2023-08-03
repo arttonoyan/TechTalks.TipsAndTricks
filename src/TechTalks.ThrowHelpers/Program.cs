@@ -7,7 +7,7 @@ internal class Program
     {
         try
         {
-            Test_ThrowIfNullOrEmptyWithMethod("");
+            Test_ThrowIfNullOrEmptyWithExtensionMethod("");
         }
         catch (Exception ex)
         {
@@ -19,7 +19,7 @@ internal class Program
 
     #region Standard
 
-    private static void Test_ThrowIfNullOrEmpty(string input)
+    private static void Test_ThrowIfNullOrEmpty(string? input)
     {
         if (string.IsNullOrEmpty(input))
         {
@@ -33,14 +33,14 @@ internal class Program
 
     #region With Method
 
-    private static void Test_ThrowIfNullOrEmptyWithMethod(string input)
+    private static void Test_ThrowIfNullOrEmptyWithMethod(string? input)
     {
-        ThrowIfNullOrEmpty(input, nameof(input));
+        ThrowIfNullOrEmpty(input);
 
         Console.WriteLine($"Input value is {input}");
     }
 
-    private static void ThrowIfNullOrEmpty(string input, string? paramName = null)
+    private static void ThrowIfNullOrEmpty(string? input, string? paramName = null)
     {
         if (string.IsNullOrEmpty(input))
         {
@@ -52,11 +52,11 @@ internal class Program
 
     #region With Extension Method
 
-    private static void Test_ThrowIfNullOrEmptyWithExtensionMethod(string input)
+    private static void Test_ThrowIfNullOrEmptyWithExtensionMethod(string? input)
     {
-        ArgumentException.ThrowIfNullOrEmpty(input, nameof(input));
+        ArgumentException.ThrowIfNullOrEmpty(input);
 
-        Console.WriteLine($"Input value is {input}");
+        Console.WriteLine($"Input value is {input}, Length is {input.Length}");
     }
 
     #endregion
