@@ -5,9 +5,10 @@ using System.Text;
 namespace TechTalks.SimpleStringConcatention.Benchmarks;
 
 [MemoryDiagnoser]
-[LongRunJob(RuntimeMoniker.Net60)]
+[SimpleJob(RuntimeMoniker.Net60)]
 //[LongRunJob(RuntimeMoniker.Net70)]
 //[LongRunJob(RuntimeMoniker.Net80)]
+//[SimpleJob(RunStrategy.Monitoring, iterationCount: 10, id: "MonitoringJob")]
 public class StringConcatSimple
 {
     private string title = "Mr.", firstName = "Artyom", middleName = "Tonoyan", lastName = "Armen";
